@@ -530,7 +530,7 @@ function pieChart(provinsi,arah,jk) {
 
   pieLabel3.transition()
     .text(function(){
-      if (pieData[1] == 0){
+      if (pieData[0] == 0){
         return "0%";
       } else {
         return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
@@ -539,7 +539,7 @@ function pieChart(provinsi,arah,jk) {
 
   pieLabel4.transition()
     .text(function(){
-      if (pieData[0] == 0){
+      if (pieData[1] == 0){
         return "0%";
       } else {
         return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
