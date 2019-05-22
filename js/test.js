@@ -463,21 +463,19 @@ function titleBar(provinsi, arah,jk) {
 
 
 // Pie Chart
-function pieChart(provinsi,arah,jk) {
-
+function pieChart(provinsi,arah) {
   var radius = 50;
-
   // filter data on direction
   if (arah == "masuk"){
     lakiLaki = Total_migrasi.filter(function(d){
       if (d.kode_prov == provinsi & d.jenis_jkdata=="Male") {
         return d.masuk;
       }
-    })[0];
+    })[0].masuk;
     perempuan = Total_migrasi.filter(function(d){
       if (d.kode_prov == provinsi & d.jenis_jkdata=="Female") {
         return d.masuk;
-      }[0];
+      }[0].masuk;
     })
   } else if (arah == "keluar"){
     lakiLaki = Total_migrasi.filter(function(d){
@@ -491,8 +489,6 @@ function pieChart(provinsi,arah,jk) {
       }
   })[0].keluar;
 }
-
-
 
   var pieData = [+lakiLaki,+perempuan]
 
@@ -533,7 +529,7 @@ function pieChart(provinsi,arah,jk) {
       if (pieData[0] == 0){
         return "0%";
       } else {
-        return (pieData[0] / (pieData[0]+pieData[1]));
+        return f(Number(pieData[0]) / (Number(pieData[0])+Number(pieData[1]));
       }
     });
 
@@ -542,7 +538,7 @@ function pieChart(provinsi,arah,jk) {
       if (pieData[1] == 0){
         return "0%";
       } else {
-        return (pieData[1] / (pieData[0]+pieData[1])) ;
+        return f(Number(pieData[1]) / (Number(pieData[0])+Number(pieData[1]))) ;
       }
     });
 
