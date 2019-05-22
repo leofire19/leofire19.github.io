@@ -529,7 +529,7 @@ function pieChart(provinsi,arah) {
       if (pieData[0] == 0){
         return "0%";
       } else {
-        return f(Number(pieData[0]) / (Number(pieData[0])+Number(pieData[1]));
+        return f(Number(pieData[0]) / (Number(pieData[0])+Number(pieData[1])));
       }
     });
 
