@@ -473,11 +473,11 @@ function pieChart(provinsi,arah,jk) {
       if (d.kode_prov == provinsi & d.jenis_jkdata=="Male") {
         return d.masuk;
       }
-    })[0].masuk;
+    })[0];
     perempuan = Total_migrasi.filter(function(d){
       if (d.kode_prov == provinsi & d.jenis_jkdata=="Female") {
         return d.masuk;
-      }[0].masuk;
+      }[0];
     })
   } else if (arah == "keluar"){
     lakiLaki = Total_migrasi.filter(function(d){
