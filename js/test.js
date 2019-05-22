@@ -533,7 +533,7 @@ function pieChart(provinsi,arah,jk) {
       if (pieData[0] == 0){
         return "0%";
       } else {
-        return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
+        return (pieData[0] / (pieData[0]+pieData[1]));
       }
     });
 
@@ -542,7 +542,7 @@ function pieChart(provinsi,arah,jk) {
       if (pieData[1] == 0){
         return "0%";
       } else {
-        return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
+        return (pieData[1] / (pieData[0]+pieData[1])) ;
       }
     });
 
